@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food company</title>
+    <link rel="stylesheet" href="program/style.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+
+
+        }
+
+        #navbar {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        #logo {
+            margin: 10px 15px;
+        }
+
+        #logo img {
+            height: 56px;
+            width: 56px;
+            margin: 10px 15px;
+            ;
+        }
+
+        #navbar ul {
+            display: flex;
+            /* border: 2px red; */
+
+
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+            margin: 12px 12px;
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a {
+            /* background-color: white;
+            color: black;
+             */
+            color: white;
+            display: block;
+            padding: 3px 20px;
+            /*           
+            border-radius: 20px; */
+            text-decoration: none
+        }
+
+        #navbar ul li a:hover {
+            background-color: white;
+            color: black;
+
+            display: block;
+            padding: 3px 20px;
+
+            border-radius: 20px;
+            text-decoration: none
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0.4;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #home h1 {
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+
+        }
+
+        #home p {
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .hprimary {
+            font-size: 2.8rem;
+            padding: 12px;
+        }
+       
+         
+        .secondary-services {
+            font-size: 2.8rem;
+            padding: 12 px;
+        }
+        
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 642px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: rgb(187, 87, 87);
+            border-radius: 10px;
+            cursor: pointer
+        }
+        .btn:hover{
+            background-color: rgb(111, 111, 136);
+            color: black;
+        }
+        #services{
+            margin:  102px 0px;
+            display: flex;
+
+        }
+        #services .box{
+            border: 2px solid rgb(22, 4, 4);
+            height: 220px;
+            background-color: rgb(111, 111, 136);
+            padding: 23px;
+            margin: 2px;
+            border-radius: 12px;
+        
+
+        }
+        #services .box img{
+        
+            height: 100px;
+            width: 100px;
+            margin: auto;
+            display: block;
+        
+        }
+        .primarycenter{
+            text-align: center;
+            position: relative;
+            top: 80px;
+            font-size: 1.8rem;
+            
+        }
+        .secondary-services{
+            text-align: center;
+        }
+        #services p{
+            font-family: 'Lucida Sans';
+        }
+         #clients{
+             display: flex;
+             
+             justify-content: center;
+             align-items: center;
+             
+         }
+         #clients::before{
+             content: "";
+             position: absolute;
+             background: url('background.jpg');
+             height: 100%;
+             width: 100%;
+             z-index: -1;
+             opacity: 0.4;
+         }
+            .client-items img{
+            
+                height: 100px;
+                display: block;
+                margin: auto;
+            }
+            .client-items{
+                padding: 10px;
+            }
+            #client h1{
+                text-align: center;
+                position: relative;
+                top: -100px;
+                font-size: 30px;
+                font-family: 'Times New Roman';
+
+            }
+            #client{
+                position: relative;
+                top: 20px;
+    
+                height: 300px;
+                
+            }
+            .formgroup{
+                padding: 0px 100px;
+                margin: 20px 0px;
+            }
+        /* #services */
+        #contact .primarycontact{
+            text-align: center;
+            font-size: 30px;
+        }
+        #contactbox .formgroup{
+            position: relative;
+            top: 30px;
+            text-align: center;
+            margin: 20px;
+            height: 40px;
+        }
+        #contactbox::before{
+            content: "";
+            position: absolute;
+            background: url('background.jpg');
+            height: 400px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        .text label{
+            font-size: 30px;
+            /* background-color: rgb(165, 187, 252); */
+        }
+        #message{
+            background-color: rgb(165, 187, 252);
+        }
+        .center{
+            text-align: center;
+            font-size: 20px;
+        }
+        .formgroup label{
+            font-size: 30px;
+        }
+        .formgroup #name{
+            font-size: 20px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src='logo1.jpg' width="96px" height="97px" alt="my online meal.com">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services">service</a></li>
+            <li class="item"><a href="#contact">contactus</a></li>
+            <li class="item"><a href="#client">help</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="hprimary">Welcome to my Website</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quam esse sequi iure quia cumque, eligendi
+            volup</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, velit labore. Omnis
+        </p>
+        <button class="btn">order now</button>
+    </section>
+    <section class="services-container">
+        <h1 class="primarycenter">our services</h1>
+        <div id="services">
+            <div class="box">
+                <img src='picture1.jpg' alt="">
+                <h2 class="secondary-services">shshoot</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nesciunt beatae veniam
+                    
+
+                </p>
+            </div>
+            <div class="box">
+                <img src='picture2.jpg' alt="">
+                <h2 class="secondary-services">Angoor</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nesciunt beatae veniam
+                    
+
+                </p>
+            </div>
+            <div class="box">
+                <img src='picture3.jpg' alt="">
+                <h2 class="secondary-services">pizza</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nesciunt beatae veniam
+                    
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="client">
+        <h1 class="clients center">Our clients</h1>
+        <div id="clients">
+        <div class="client-items">
+            <img src='logo2.jpg' alt="our client">
+        </div>
+        <div class="client-items">
+            <img src='logo1.jpg' alt="our client">
+        </div>
+        <div class="client-items">
+            <img src='logo2.jpg' alt="our client">
+        </div>
+        <div class="client-items">
+            <img src='logo1.jpg' alt="our client">
+        </div>
+    </div>
+    </section>
+    <section id="contact">
+        <h1 class="primarycontact">contact us</h1>
+        <div id="contactbox">
+            <form action="">
+                <div class="formgroup">
+                    <label for="name">Name:</label>
+                    <input type="text" name="Name" id="name"
+                    placeholder="Enter your name">
+                   
+                </div>
+                <div class="formgroup">
+                    <label for="name">Mo.number:</label>
+                    <input type="text" name="Name" id="name"
+                    placeholder="Enter your number">
+                   
+                </div>
+                
+                <div class="formgroup">
+                    <label for="name">E-mail:</label>
+                    <input type="text" name="Name" id="name"
+                    placeholder="Enter your Email">
+                   
+                </div>
+                <div class="text">
+
+                <label for="name">Text here</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                
+                
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy; www.onlinemeal.com All Right reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
